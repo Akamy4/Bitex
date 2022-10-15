@@ -1,0 +1,113 @@
+.brand-catalog {
+    position: relative;
+    z-index: 3;
+    max-width: 1307px;
+    margin: 0 auto 0;
+
+    &__catalog-wrap.catalog__wrap {
+        padding: 107px 23px 110px 32px;
+        position: relative;
+        margin: 0 40px;
+        max-width: 1253px;
+        background: rgba(12, 12, 12, 0.99);
+    }
+
+    &__col-1 {}
+
+    &__categories-title-wrap {
+        background: linear-gradient(133.95deg, #5FFF51 11.78%, #C7FD70 75.46%);
+    }
+
+    &__categories-list {}
+
+    &__categories-item {
+        position: relative;
+    }
+
+    &__categories-item-btn {
+        transition: .2s;
+
+        &:hover,
+        &:focus {
+            background-color: #DBFF88;
+
+            +.brand-catalog {
+                &__subcategories-list {
+                    visibility: visible;
+                    opacity: 1;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    &__subcategories-list {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 0;
+        top: 44px;
+        left: 0;
+        width: 100%;
+        border-radius: 12px;
+        transition: .2s;
+        border: 2px solid #36F329;
+        overflow: hidden;
+        box-shadow: #b1b1b1 0px 0px 4px 0px;
+
+        &:hover,
+        &:focus {
+            visibility: visible;
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+
+    &__subcategories-item {
+        border-bottom: 0.3px solid #000000;
+
+        &:first-child {}
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .brand-catalog__categories-item-btn {
+            &.active {
+                background-color: #DBFF88;
+            }
+        }
+    }
+
+    &__col-2 {
+        margin-left: 41px;
+    }
+
+    &__cards-list {}
+
+    &__cards-item {
+        &--brand {}
+    }
+
+    &__cards-img-wrap {}
+
+    &__cards-img {}
+
+    &__price-block {}
+
+    &__current-price {}
+
+    &__old-price {}
+
+    &__sale {}
+
+    &__card-desc {}
+
+    &__card-btn {
+
+        &:hover,
+        &:focus {
+            background-color: #68D75E;
+        }
+    }
+}

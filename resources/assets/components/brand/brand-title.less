@@ -1,0 +1,84 @@
+.brand-title {
+    position: relative;
+    z-index: 3;
+    max-width: 1307px;
+    margin: 24px auto 0;
+
+    &__wrap {
+        display: flex;
+        align-items: flex-start;
+        margin: 0 40px;
+        background: rgba(12, 12, 12, 0.99);
+        padding: 102px 23px 102px 71px;
+    }
+
+    &__col-1 {
+        max-width: 500px;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: @fw-bold;
+        max-width: 500px;
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+
+    &__desc {
+        color: #fff;
+        font-size: 15px;
+        margin-top: 62px;
+        line-height: 1.45;
+        letter-spacing: -0.3px;
+    }
+
+    &__col-2 {
+        max-width: 581px;
+        // width: 100%;
+        margin-left: 52px;
+    }
+
+    &__slider {
+        position: relative;
+        width: auto;
+        height: 380px;
+
+        .slick-list {}
+
+        .slick-track {}
+
+        &:before, &:after {
+            position: absolute;
+            z-index: 2;
+            content: '';
+            top: 0;
+            height: 100%;
+            width: 117px;
+            background-repeat: no-repeat;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 85.12%);
+        }
+
+        &:before {
+            left: 0;
+            transform: rotate(180deg);
+        }
+
+        &:after {
+            right: 0;
+        }
+    }
+
+    &__slide {
+        width: 302px !important;
+        height: 380px;
+        width: 100%;
+        margin: 0 11px;
+    }
+
+    &__slide-img {
+        height: 380px;
+    }
+}

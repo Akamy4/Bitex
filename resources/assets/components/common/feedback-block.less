@@ -1,0 +1,124 @@
+.feedback-block {
+    position: relative;
+    z-index: 3;
+
+    &.retail {
+        background: linear-gradient(90deg, #F625A1 0%, #C566E6 99.2%);
+        margin-top: 142px;
+
+        .feedback-block__btn {
+            background-color: #A00AFF;
+
+            &:hover,
+            &:focus {
+                background-color: #aa00d4;
+            }
+        }
+
+        .feedback-block__input {
+
+            &:hover,
+            &:focus {
+                border-color: #A00AFF;
+            }
+        }
+    }
+
+    &.brand {
+        background: linear-gradient(90deg, #5AFF50 0%, #CAFD71 99.2%);
+
+        .feedback-block__btn {
+            background: #36F329;
+
+            &:hover,
+            &:focus {
+                background-color: #1bcf0e;
+            }
+        }
+
+        .feedback-block__input {
+
+            &:hover,
+            &:focus {
+                border-color: #36F329;
+            }
+        }
+    }
+
+    &.corp {
+        background: linear-gradient(90deg, #FF852E 0%, #FFB900 99.2%);
+
+        .feedback-block__btn {
+            background: #FD8B23;
+            box-shadow: 0px 3px 20px rgba(255, 190, 46, 0.6);
+
+            &:hover,
+            &:focus {
+                background-color: #e06f04;
+            }
+        }
+
+        .feedback-block__input {
+
+            &:hover,
+            &:focus {
+                border-color: #FD8B23;
+            }
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1108px;
+        padding: 87px 36px 57px 47px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        max-width: 420px;
+        margin-top: 38px;
+    }
+
+    &__title {
+        color: #000;
+        font-weight: @fw-bold;
+        font-size: 40px;
+    }
+
+    &__desc {
+        font-size: 20px;
+        margin-top: 11px;
+    }
+
+    &__form {
+        max-width: 427px;
+        width: 100%;
+        margin-left: 40px;
+    }
+
+    &__input {
+        border-radius: 14px;
+        height: 58px;
+        font-size: 18px;
+        padding: 20px 21px;
+
+        &::placeholder {
+            color: #000;
+        }
+
+        &+& {
+            margin-top: 12px;
+        }
+    }
+
+    &__btn {
+        max-width: 374px;
+        margin: 45px auto 0;
+        padding: 18px 20px 17px;
+        color: #000;
+        font-size: 20px;
+        font-weight: @fw-bold;
+        border-radius: 42.5px;
+    }
+}

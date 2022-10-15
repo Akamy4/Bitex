@@ -1,0 +1,114 @@
+.header {
+    position: relative;
+    z-index: 7;
+    background-color: #000;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        max-width: 1255px;
+        margin: 0 auto;
+        padding: 0 43px 0 56px;
+        justify-content: space-between;
+        padding-bottom: 4px;
+    }
+
+    &__logo-img {
+        width: 124px;
+        height: 84px;
+        object-fit: cover;
+        margin-right: 20px;
+    }
+
+    &__information {
+        display: flex;
+        margin-left: auto;
+        margin-right: 49px;
+    }
+
+    &__desc {
+        color: #fff;
+        letter-spacing: -0.4px;
+
+        span {
+            display: block;
+            font-size: 12px;
+        }
+
+        &+& {
+            margin-left: 70px;
+        }
+    }
+
+    &__search-form {
+        position: relative;
+        max-width: 270px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 9px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 4px;
+            right: 59px;
+            height: 20px;
+            width: 1px;
+            background-color: #000;
+        }
+    }
+
+    &__input {
+        height: 29px;
+        padding: 5px 65px 5px 12px;
+    }
+
+    &__btn {
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 21px;
+        height: 17px;
+        width: 17px;
+        background-repeat: no-repeat;
+        background-image: url(../img/search.png);
+        background-size: cover;
+    }
+
+    &__menu-btn {
+        position: relative;
+        z-index: 1;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        cursor: pointer;
+        height: 19px;
+        width: 30px;
+        margin-top: 0;
+
+        &:hover,
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__menu-btn-line {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        transition: .3s;
+
+        &+& {
+            margin-top: 5px;
+        }
+    }
+
+    &__nav {}
+}
+
+@media(max-width: 1500px) {
+    .header {}
+}

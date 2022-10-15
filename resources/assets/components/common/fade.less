@@ -1,0 +1,111 @@
+.fade {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    &--instantly {
+        opacity: 0;
+        animation-name: fadeInUp;
+    }
+
+    &--instantly-1 {
+        opacity: 0;
+        animation-name: fadeInUp1;
+    } 
+
+    &__delay-0 {
+        animation-delay: 0s;
+    }
+
+    &__delay-1 {
+        animation-delay: 0.15s;
+    }
+
+    &__delay-2 {
+        animation-delay: 0.3s;
+    }
+
+    &__delay-3 {
+        animation-delay: 0.45s;
+    }
+
+    &__delay-4 {
+        animation-delay: 0.6s;
+    }
+
+    &__delay-5 {
+        animation-delay: 0.75s;
+    }
+
+    &__delay-6 {
+        animation-delay: 0.90s;
+    }
+
+    &__delay-7 {
+        animation-delay: 1.05s;
+    }
+
+    &__delay-8 {
+        animation-delay: 1.2s;
+    }
+
+    &__delay-9 {
+        animation-delay: 1.35s;
+    }
+
+    &__delay-10 {
+        animation-delay: 1.5s;
+    }
+
+    &.animate {
+        opacity: 1;
+
+        .fadeInUp__child {
+            animation-name: fadeInUp;
+        }
+    }
+}
+
+.fadeInUp {
+    &.animate {
+        animation-name: fadeInUp;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 15%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp1 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -10%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media all and(max-width: 550px) {
+    @keyframes fadeInUp1 {
+        from {
+            opacity: 0;
+            transform: translate3d(0, -5%, 0);
+        }
+
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

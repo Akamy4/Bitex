@@ -1,0 +1,106 @@
+.brand-video {
+    position: relative;
+    z-index: 3;
+    max-width: 1307px;
+    margin: 0 auto 0;
+
+    &:before {
+        position: absolute;
+        z-index: 2;
+        content: '';
+        top: -82px;
+        left: -237px;
+        width: 1900px;
+        height: 1008px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+        background-image: url(../img/brand-blur-bg.svg);
+    }
+
+    &__wrap {
+        display: flex;
+        position: relative;
+        margin: 0 40px;
+        background: rgba(12, 12, 12, 0.99);
+        padding: 132px 22px 300px 33px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            z-index: 3;
+            right: -3px;
+            width: 1361px;
+            height: 800px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../img/brand-video-geom.svg);
+        }
+    }
+
+    &__col-1 {
+        position: relative;
+        z-index: 4;
+        width: 40.46%;
+        background: #69D860;
+        box-shadow: -24px 0px 20px rgba(0, 0, 0, 0.25), inset 0px 21px 38px #7CE774;
+        border-radius: 55px;
+        margin-bottom: -90px;
+    }
+
+    &__video-wrap {
+        position: relative;
+        width: 97.01%;
+        padding-bottom: 97.01%;
+        border-radius: 55px;
+        margin-top: 73px;
+        margin-bottom: -59px;
+        box-shadow: -11px 9px 39px #448F3E;
+        margin-left: 75px;
+    }
+
+    &__video {}
+
+    &__col-2 {
+        position: relative;
+        z-index: 3;
+        background: linear-gradient(148.05deg, rgba(255, 255, 255, 0.215) 0%, rgba(255, 255, 255, 0) 100%);
+        border: 1px solid #666;
+        backdrop-filter: blur(42px);
+        border-radius: 33px;
+        width: 44.625%;
+        margin-left: 15%;
+        margin-top: -7px;
+        padding: 54px 45px 45px;
+    }
+
+    &__title-wrap {
+        position: relative;
+        z-index: 4;
+        padding: 19px 37px;
+        border-radius: 12px;
+        background: #6AD860;
+        max-width: 390px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 44px;
+        font-weight: @fw-bold;
+        letter-spacing: -0.7px;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__desc {
+        max-width: 348px;
+        margin: 33px auto 0;
+        font-size: 32px;
+        color: #fff;
+        letter-spacing: -0.4px;
+        font-weight: 300;
+        text-transform: lowercase;
+        line-height: 1.3;
+    }
+}

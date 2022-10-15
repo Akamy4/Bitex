@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+// Default Variables
+
+@slick-font-path: "./fonts/";
+@slick-font-family: "slick";
+@slick-loader-path: "./";
+@slick-arrow-color: white;
+@slick-dot-color: #fff;
+@slick-dot-color-active: #333;
+@slick-prev-character: "←";
+@slick-next-character: "→";
+@slick-dot-character: "•";
+@slick-dot-size: 6px;
+@slick-opacity-default: 0.75;
+@slick-opacity-on-hover: 1;
+@slick-opacity-not-active: 0.25;
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 82px;
+    width: 82px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+    transition: .2s;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        color: transparent;
+
+        &:before {
+            opacity: @slick-opacity-on-hover;
+        }
+    }
+
+    &.slick-disabled {
+        cursor: default;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: @slick-font-family;
+    font-size: 12px;
+    line-height: 1;
+    color: @slick-arrow-color;
+    opacity: @slick-opacity-default;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    & when (@slick-font-family ='slick') {
+
+        /* Icons */
+        @font-face {
+            font-family: 'slick';
+            font-weight: normal;
+            font-style: normal;
+        }
+    }
+}
+
+.slick-prev {
+    left: 40px;
+    z-index: 1;
+
+    [dir="rtl"] & {
+        left: auto;
+        right: 40px;
+    }
+
+    &:before {
+        position: absolute;
+        top: 30px;
+        left: 14px;
+        content: '';
+        border-bottom: 9px solid #fff;
+        border-left: 9px solid #fff;
+        transform: rotate(45deg);
+        width: 35px;
+        height: 35px;
+
+        [dir="rtl"] & {
+            content: @slick-next-character;
+        }
+    }
+}
+
+.slick-next {
+    right: 40px;
+
+    [dir="rtl"] & {
+        left: 40px;
+        right: auto;
+    }
+
+    &:before {
+        position: absolute;
+        top: 29px;
+        right: 15px;
+        content: '';
+        border-bottom: 9px solid #fff;
+        border-left: 9px solid #fff;
+        opacity: 1;
+        transform: rotate(-135deg);
+        width: 35px;
+        height: 35px;
+
+        [dir="rtl"] & {
+            content: @slick-prev-character;
+        }
+    }
+}
+
+/* Dots */
+
+.slick-dotted .slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    li+li {
+        margin-left: 15px;
+    }
+
+    li {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 8px;
+        width: 8px;
+        padding: 0;
+        cursor: pointer;
+
+        button {
+            position: relative;
+            border: 0;
+
+            display: block;
+            height: 8px;
+            width: 8px;
+            outline: none;
+            color: transparent;
+            padding: 2px;
+            cursor: pointer;
+            border-radius: 50%;
+
+            &:hover,
+            &:focus {
+                outline: none;
+
+                &:before {}
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 8px;
+                transition: .2s;
+                border-radius: 50%;
+                border: 1px solid #fff;
+            }
+        }
+
+        &.slick-active button {
+            background: #fff;
+
+            &:before {
+                opacity: 1;
+            }
+
+            &:hover,
+            &:focus {
+                &:before {}
+            }
+        }
+    }
+}

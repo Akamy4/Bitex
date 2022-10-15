@@ -1,0 +1,123 @@
+.retail-catalog {
+    position: relative;
+    z-index: 2;
+    margin-top: 164px;
+
+    &__wrap {
+        max-width: 1420px;
+        padding: 0 40px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 50px;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: @delagothic;
+        letter-spacing: 1.4px;
+    }
+
+    &__promo-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-top: 88px;
+    }
+
+    &__promo-item {
+        width: 23.284%;
+        padding-bottom: 23.284%;
+
+        &+& {
+            margin-left: 2.288%;
+        }
+
+        &:nth-child(4n+5) {
+            margin-left: 0;
+        }
+
+        &:nth-child(n+5) {
+            margin-top: 2.7%;
+        }
+    }
+
+    &__promo-img {
+        transition: .2s;
+    }
+
+    &__promo-link {
+        z-index: 1;
+
+        &:hover,
+        &:focus {
+            +.retail-catalog {
+                &__promo-img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    &__catalog-wrap {
+        margin-top: 138px;
+    }
+
+    &__col-1 {
+        max-width: 248px;
+    }
+
+    &__categories-list {}
+
+    &__categories-item {}
+
+    &__categories-item-btn {}
+
+    &__col-2 {
+        margin-left: 51px;
+    }
+
+    &__cards-list {}
+
+    &__cards-item {}
+
+    &__cards-img-wrap {}
+
+    &__cards-img {}
+
+    &__price-block {}
+
+    &__current-price {}
+
+    &__old-price {}
+
+    &__sale {}
+
+    &__card-desc {}
+
+    &__card-btn {}
+
+    &__nav-block {}
+
+    &__nav-btn {}
+
+    &__nav-list {}
+
+    &__nav-item {}
+
+    &__nav-link {}
+
+    &__banner-wrap {
+        max-width: 1284px;
+        margin: 116px auto 0;
+        padding-bottom: 12.986%;
+        filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.25));
+        border-radius: 12px;
+    }
+
+    &__banner-link {
+        z-index: 2;
+    }
+
+    &__banner {}
+}

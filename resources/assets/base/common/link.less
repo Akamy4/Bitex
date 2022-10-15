@@ -1,0 +1,30 @@
+.link {
+    position: relative;
+    color: #fff;
+    transition: 0.2s;
+    line-height: @lh-small;
+    cursor: pointer;
+
+    &-abs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &--w{
+        width: max-content;
+        color: #fff;
+        padding-bottom: 2px;
+        margin-bottom: -2px;
+        border-bottom: 1px solid transparent;
+    }
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border-color: #fff;
+    }
+    
+}

@@ -1,0 +1,46 @@
+.title {
+    line-height: @lh-small;
+
+    &--l1 {
+        font-weight: @fw-medium;
+    }
+
+    &--l2 {
+        font-weight: @fw-norm;
+    }
+
+    &--l3 {
+        font-weight: @fw-bold;
+        font-size: 24px;
+    }
+
+    &--l4 {
+        font-weight: @fw-norm;
+    }
+
+    &--l5 {
+    }
+}
+
+@media all and(max-width:@1023) {
+    .title {
+        &--l1 {
+            font-size: 35px;
+        }
+
+        &--l2 {
+        }
+    }
+}
+
+@media all and(max-width:@550) {
+    .title {
+
+        &--l1{
+            font-size: 32px;
+        }
+        
+        &--l2 {
+        }
+    }
+}
